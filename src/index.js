@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -35,7 +35,7 @@ const Menu = ({
   const handleClick = () => setShowMenu(!showMenu);
 
   return (
-    <div>
+    <Fragment>
       <LargeMenu className={largeMenuClassName} size={changeMenuOn}>
         {menu}
       </LargeMenu>
@@ -47,7 +47,7 @@ const Menu = ({
         )}
         {showMenu ? <div>{menu}</div> : null}
       </SmallMenu>
-    </div>
+    </Fragment>
   );
 };
 
