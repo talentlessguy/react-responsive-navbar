@@ -1,16 +1,18 @@
 # react-responsive-navbar
 
+This is a React hooks version of [react-responsive-navbar.](https://github.com/paigewilliams/react-responsive-navbar)
+
 Nothing crazy, nothing flashy, just a simple, flexible & completely customisable
 responsive navigation bar component. Check out
 [this demo](https://stephanieinez.github.io/react-responsive-navbar/).
 
-[![NPM](https://img.shields.io/npm/v/react-responsive-navbar.svg)](https://www.npmjs.com/package/react-responsive-navbar)
+[![NPM](https://img.shields.io/npm/v/react-responsive-navbar.svg)](https://www.npmjs.com/package/@paigewilliams/react-responsive-navbar)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-responsive-navbar
+npm install --save npm i @paigewilliams/react-responsive-navbar
 ```
 
 ## Usage
@@ -66,4 +68,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [Stephanie Tassone](https://github.com/stephanieinez)
+MIT © [Paige Williams](https://github.com/paigewilliams)
