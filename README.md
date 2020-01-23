@@ -1,6 +1,6 @@
 # react-responsive-navbar
 
-This is a React hooks version of [react-responsive-navbar.](https://github.com/paigewilliams/react-responsive-navbar)
+This is a TypeScript rewrite of a React hooks version of [react-responsive-navbar.](https://github.com/paigewilliams/react-responsive-navbar)
 
 Nothing crazy, nothing flashy, just a simple, flexible & completely customisable
 responsive navigation bar component. Check out
@@ -12,59 +12,46 @@ responsive navigation bar component. Check out
 ## Install
 
 ```bash
-npm install --save npm i @paigewilliams/react-responsive-navbar
+pnpm i react-responsive-navbar-ts
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react';
+import React from 'react'
 
-import ResponsiveMenu from 'react-responsive-navbar';
+import ResponsiveMenu from 'react-responsive-navbar'
 
-class Example extends Component {
-  render() {
-    return (
-      <ResponsiveMenu
-        menuOpenButton={<div />}
-        menuCloseButton={<div />}
-        changeMenuOn="500px"
-        largeMenuClassName="large-menu-classname"
-        smallMenuClassName="small-menu-classname"
-        menu={
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
-        }
-      />
-    );
-  }
-}
+const Example = () => (
+  <ResponsiveMenu
+    menuOpenButton={<div />}
+    menuCloseButton={<div />}
+    changeMenuOn="500px"
+    largeMenuClassName="large-menu-classname"
+    smallMenuClassName="small-menu-classname"
+    menu={
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    }
+  />
+)
 ```
 
 ## Props
 
-* **menuOpenButton** & **menuCloseButton**: the icons for small screens. I use
+- **menuOpenButton** & **menuCloseButton**: the icons for small screens. I use
   `react-icons` in the
   [example](https://stephanieinez.github.io/react-responsive-navbar/) however
   you are free to use any `div` that you please.
-* **changeMenuOn**: specify the page width as a string in `px` that you would
+- **changeMenuOn**: specify the page width as a string in `px` that you would
   like to switch between the small and large menu.
-* **menu**: takes in any `div` to create your menu content.
-* You can also specify individual stylings for each of the large or small menus
+- **menu**: takes in any `div` to create your menu content.
+- You can also specify individual stylings for each of the large or small menus
   by adding a `className` to **largeMenuClassName** or **smallMenuClassName**
-
-| name               | type            | required |
-| ------------------ | --------------- | -------- |
-| menuOpenButton     | react component | yes       |
-| menuCloseButton    | react component | yes       |
-| changeMenuOn       | string          | yes      |
-| menu               | react component | yes      |
-| largeMenuClassName | string          | no       |
-| smallMenuClassName | string          | no       |
 
 ## License
 

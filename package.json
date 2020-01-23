@@ -1,54 +1,42 @@
 {
-  "name": "@paigewilliams/react-responsive-navbar",
+  "name": "react-responsive-navbar-ts",
   "version": "1.0.13",
-  "description": "A simple, flexible & completely customisable responsive navigation bar react component. This is a fork from Stephanie Inez",
+  "description": "A simple, flexible & completely customisable responsive navigation bar React component, rewritten in TypeScript and Emotion. This is a fork from Paige Williams from Stephanie Inez",
   "author": "Paige Williams",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:paigewilliams/react-responsive-navbar.git"
+    "url": "git@github.com:talentlessguy/react-responsive-navbar.git"
   },
+  "source": "src/index.tsx",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "prepublish": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
-  },
-  "dependencies": {
-    "styled-components": "^2.2.4"
+    "build": "microbundle --globals @emotion/core=Emotion"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
     "react": "^0.14.9 || ^15.0.0 || ^16.0.0",
     "react-dom": "^0.14.9 || ^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "gh-pages": "^1.0.0",
-    "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-commonjs": "^8.2.1",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-postcss": "^0.5.5"
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/react": "^16.9.17",
+    "microbundle": "^0.11.0",
+    "typescript": "^3.7.5"
   },
   "files": [
     "dist"
   ],
   "bugs": {
-    "url": "https://github.com/paigewilliams/react-responsive-navbar/issues"
+    "url": "https://github.com/talentlessguy/react-responsive-navbar/issues"
   },
-  "homepage": "https://github.com/paigewilliams/react-responsive-navbar#readme",
-  "directories": {
-    "example": "example"
+  "homepage": "https://github.com/talentlessguy/react-responsive-navbar#readme",
+  "dependencies": {
+    "@emotion/core": ">=10.0"
   }
 }
