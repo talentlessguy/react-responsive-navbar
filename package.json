@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-navbar-ts",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "A simple, flexible & completely customisable responsive navigation bar React component, rewritten in TypeScript and Emotion. This is a fork from Paige Williams from Stephanie Inez",
   "author": "Paige Williams",
   "license": "MIT",
@@ -9,12 +9,11 @@
     "url": "git@github.com:talentlessguy/react-responsive-navbar.git"
   },
   "source": "src/index.tsx",
-  "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "build": "microbundle --globals @emotion/core=Emotion, @emotion/styled=styled",
+    "build": "microbundle",
     "prepare": "pnpm run build"
   },
   "peerDependencies": {
