@@ -1,5 +1,6 @@
 dependencies:
   '@emotion/core': 10.0.27
+  '@emotion/styled': 10.0.27_@emotion+core@10.0.27
 devDependencies:
   '@babel/core': 7.8.3
   '@babel/preset-env': 7.8.3_@babel+core@7.8.3
@@ -960,6 +961,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fxfMSBMX3tlIbKUdtGKxqB1fyrH6gVrX39Gsv3y8lRYKUqlgDt3UMqQyGnR1bQMa2B8aGnhLZokZgg8vT0Le+A==
+  /@emotion/is-prop-valid/0.8.6:
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    dev: false
+    resolution:
+      integrity: sha512-mnZMho3Sq8BfzkYYRVc8ilQTnc8U02Ytp6J1AwM6taQStZ3AhsEJBX2LzhA/LJirNCwM2VtHL3VFIZ+sNJUgUQ==
   /@emotion/memoize/0.7.4:
     dev: false
     resolution:
@@ -978,6 +985,30 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zM9PFmgVSqBw4zL101Q0HrBVTGmpAxFZH/pYx/cjJT5advXguvcgjHFTCaIO3enL/xr89vK2bh0Mfyj9aa0ANA==
+  /@emotion/styled-base/10.0.27_@emotion+core@10.0.27:
+    dependencies:
+      '@babel/runtime': 7.8.3
+      '@emotion/core': 10.0.27
+      '@emotion/is-prop-valid': 0.8.6
+      '@emotion/serialize': 0.11.15
+      '@emotion/utils': 0.11.3
+    dev: false
+    peerDependencies:
+      '@emotion/core': ^10.0.27
+      react: '>=16.3.0'
+    resolution:
+      integrity: sha512-ufHM/HhE3nr309hJG9jxuFt71r6aHn7p+bwXduFxcwPFEfBIqvmZUMtZ9YxIsY61PVwK3bp4G1XhaCzy9smVvw==
+  /@emotion/styled/10.0.27_@emotion+core@10.0.27:
+    dependencies:
+      '@emotion/core': 10.0.27
+      '@emotion/styled-base': 10.0.27_@emotion+core@10.0.27
+      babel-plugin-emotion: 10.0.27
+    dev: false
+    peerDependencies:
+      '@emotion/core': ^10.0.27
+      react: '>=16.3.0'
+    resolution:
+      integrity: sha512-iK/8Sh7+NLJzyp9a5+vIQIXTYxfT4yB/OJbjzQanB2RZpvmzBQOHZWhpAMZWYEKRNNbsD6WfBw5sVWkb6WzS/Q==
   /@emotion/stylis/0.8.5:
     dev: false
     resolution:
@@ -4408,7 +4439,8 @@ specifiers:
   '@babel/preset-env': ^7.8.3
   '@babel/preset-react': ^7.8.3
   '@babel/preset-typescript': ^7.8.3
-  '@emotion/core': ^10.0.27
+  '@emotion/core': '>=10.0'
+  '@emotion/styled': ^10.0.27
   '@types/react': ^16.9.17
   microbundle: ^0.11.0
   typescript: ^3.7.5

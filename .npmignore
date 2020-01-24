@@ -4,3 +4,4 @@ example/
 test/
 rollup.config.*
 .*
+pnpm-lock.yaml

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { css } from '@emotion/core'
+import React, { useState, Fragment } from 'react'
+import styled from '@emotion/styled'
 
 const MenuIcon = ({ onClick, icon }: { onClick: (e: React.MouseEvent<HTMLElement>) => void; icon: any }) => (
   <div role="button" onClick={onClick}>
@@ -7,18 +7,18 @@ const MenuIcon = ({ onClick, icon }: { onClick: (e: React.MouseEvent<HTMLElement
   </div>
 )
 
-const largeMenuCss = (changeMenuOn: number) => css`
+const LargeMenu = styled.div`
   display: block;
   text-align: center;
-  @media (max-width: ${changeMenuOn}) {
+  @media (max-width: ${(props: any) => props.changeMenuOn}) {
     display: none;
   }
 `
 
-const smallMenuCss = (changeMenuOn: number) => css`
+const SmallMenu = styled.div`
   display: none;
   text-align: center;
-  @media (max-width: ${changeMenuOn}) {
+  @media (max-width: ${(props: any) => props.changeMenuOn}) {
     display: block;
   }
 `
@@ -34,7 +34,7 @@ const Menu = ({
   menu: any
   largeMenuClassName?: string
   smallMenuClassName?: string
-  changeMenuOn: number
+  changeMenuOn: string
   menuOpenButton: any
   menuCloseButton: any
 }) => {
@@ -42,17 +42,17 @@ const Menu = ({
   const handleClick = () => setShowMenu(!showMenu)
 
   return (
-    <div>
-      <div className={`${largeMenuCss(changeMenuOn)} ${largeMenuClassName}`}>{menu}</div>
-      <div className={`${smallMenuCss} ${smallMenuClassName}`}>
+    <Fragment>
+      <LargeMenu changeMenuOn={changeMenuOn}>{menu}</LargeMenu>
+      <SmallMenu className={smallMenuClassName}>
         {!showMenu ? (
           <MenuIcon onClick={handleClick} icon={menuOpenButton} />
         ) : (
           <MenuIcon onClick={handleClick} icon={menuCloseButton} />
         )}
         {showMenu ? <div>{menu}</div> : null}
-      </div>
-    </div>
+      </SmallMenu>
+    </Fragment>
   )
 }
 

@@ -14,7 +14,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "build": "microbundle --globals @emotion/core=Emotion",
+    "build": "microbundle --globals @emotion/core=Emotion, @emotion/styled=styled",
     "prepare": "pnpm run build"
   },
   "peerDependencies": {
