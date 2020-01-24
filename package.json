@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-navbar-ts",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A simple, flexible & completely customisable responsive navigation bar React component, rewritten in TypeScript and Emotion. This is a fork from Paige Williams from Stephanie Inez",
   "author": "Paige Williams",
   "license": "MIT",
